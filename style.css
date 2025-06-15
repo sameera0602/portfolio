@@ -1,101 +1,122 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
-    background-color: #fdfdfd;
+    background-color: #fcfcfc;
     color: #222;
-    line-height: 1.6;
+    line-height: 1.75;
 }
 
+/* Header */
 header {
     background-color: #004080;
-    padding: 3rem 2rem;
-    text-align: center;
+    padding: 3rem 1.5rem;
+    text-align: left;
     color: white;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 
 header p {
-    margin: 0.5rem 0 0;
-    font-size: 1.3rem;
+    margin-top: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 300;
 }
 
+/* Navigation */
 nav {
-    text-align: center;
-    background-color: #ffffff;
-    padding: 1rem 0;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+    background: #ffffff;
+    padding: 1.2rem 1rem;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    border-bottom: 1px solid #eee;
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 nav a {
-    margin: 0 1.5rem;
     text-decoration: none;
-    font-weight: bold;
+    font-weight: 500;
     color: #004080;
-    text-transform: uppercase;
-    transition: color 0.3s ease-in-out;
+    font-size: 1rem;
+    border-bottom: 2px solid transparent;
+    transition: all 0.2s ease-in-out;
 }
 
 nav a:hover {
-    color: #00264d;
+    border-bottom: 2px solid #004080;
+    color: #002c5e;
 }
 
-/* Section styling */
+/* Sections */
 section {
-    padding: 4rem 2rem;
-    max-width: 1000px;
+    padding: 3rem 1.5rem;
+    max-width: 900px;
     margin: auto;
 }
 
 h2 {
     color: #003060;
-    font-size: 2rem;
-    border-bottom: 2px solid #ccc;
-    padding-bottom: 0.3rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.9rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
 }
 
+/* Projects & Internship Cards */
 .project {
-    padding: 1.5rem;
-    margin-top: 1.5rem;
-    background-color: #f7f9fc;
-    border-left: 5px solid #004080;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+    padding: 1.5rem 1.2rem;
+    border-left: 4px solid #004080;
+    background: #f9fafb;
+    border-radius: 6px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.06);
 }
 
 .project h3 {
-    margin: 0;
-    font-size: 1.8rem;
+    margin-top: 0;
     color: #003060;
+    font-size: 1.5rem;
 }
 
 .project p {
     margin: 0.5rem 0 1rem;
+    font-size: 1rem;
 }
 
+.project a {
+    color: #004080;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.project a:hover {
+    text-decoration: underline;
+}
+
+/* Contact */
 form {
     display: flex;
     flex-direction: column;
     max-width: 600px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 input, textarea {
-    margin: 0.8rem 0;
+    margin: 1rem 0;
     padding: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 1px solid #bbb;
+    border-radius: 4px;
     font-family: inherit;
     font-size: 1rem;
-    transition: border 0.3s ease;
+    transition: border 0.3s;
 }
 
 input:focus, textarea:focus {
@@ -105,55 +126,73 @@ input:focus, textarea:focus {
 
 button {
     padding: 1rem;
-    background-color: #004080;  
+    background-color: #004080;
     color: white;
     border: none;
     border-radius: 5px;
     font-weight: bold;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 1rem;
+    transition: background-color 0.2s ease;
 }
 
 button:hover {
-    background-color: #004080;
+    background-color: #002c5e;
 }
 
+/* Contact Links */
+.contact-links ul {
+    list-style: none;
+    padding: 0;
+}
 
+.contact-links li {
+    margin: 0.5rem 0;
+}
+
+.contact-links a {
+    color: #004080;
+    text-decoration: none;
+}
+
+.contact-links a:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
 footer {
     text-align: center;
     padding: 1.5rem;
     background-color: #004080;
     color: white;
     font-size: 0.9rem;
+    margin-top: 4rem;
 }
 
 footer p {
-    margin: 0;
+    margin: 0.3rem 0;
 }
 
 footer a {
-    color: white;
+    color: #ffffff;
+    margin: 0 0.3rem;
+    font-weight: 500;
     text-decoration: none;
-    margin-left: 5px;
-    transition: color 0.3s ease;
 }
 
 footer a:hover {
-    color: #f7f7f7;
+    color: #eeeeee;
 }
 
-/* Responsive design for mobile devices */
+/* Mobile Responsive */
 @media (max-width: 768px) {
     header h1 {
-        font-size: 2.5rem;
+        font-size: 2.2rem;
     }
 
-    header p {
-        font-size: 1.2rem;
-    }
-
-    nav a {
-        margin: 0 1rem;
+    nav {
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     section {
@@ -161,71 +200,15 @@ footer a:hover {
     }
 
     h2 {
-        font-size: 1.5rem;
-    }
-
-    .project {
-        padding: 1rem;
+        font-size: 1.6rem;
     }
 
     .project h3 {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
 
-    input, textarea {
-        padding: 0.8rem;
-    }
-
-    button {
-        padding: 0.8rem;
-    }
-
-    footer p {
-        font-size: 0.8rem;
-    }
-
-    footer a {
-        font-size: 0.9rem;
+    input, textarea, button {
+        font-size: 0.95rem;
     }
 }
 
-
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header p {
-        font-size: 1.1rem;
-    }
-
-    nav a {
-        display: block;
-        margin: 1rem 0;
-    }
-
-    .project {
-        padding: 1rem;
-        margin-top: 1rem;
-    }
-
-    .project h3 {
-        font-size: 1.4rem;
-    }
-
-    input, textarea {
-        font-size: 0.9rem;
-    }
-
-    button {
-        padding: 0.7rem;
-    }
-
-    footer p {
-        font-size: 0.8rem;
-    }
-
-    footer a {
-        font-size: 0.8rem;
-    }
-}
